@@ -100,16 +100,19 @@ h1, h2, h3 {
 .brand-mark {
   width: 42px;
   height: 42px;
+  position: relative;
+  overflow: hidden;
   flex: 0 0 auto;
-  color: var(--navy);
 }
 
-.brand-mark-body {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 14;
-  stroke-linecap: butt;
-  stroke-linejoin: round;
+.brand-mark img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 186%;
+  height: 186%;
+  max-width: none;
+  transform: translate(-50%, -50%);
 }
 
 .brand-copy { display: grid; line-height: 1.1; }
@@ -492,7 +495,8 @@ h1, h2, h3 {
 
 .site-footer { padding-block: 72px 30px; color: var(--white); background: #041024; }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 60px; }
-.footer-brand .brand-mark { color: var(--white); }
+.footer-brand .brand-mark { background: var(--white); border-radius: 10px; }
+.footer-brand .brand-mark img { width: 150%; height: 150%; }
 .footer-brand .brand-name { color: var(--white); }
 .footer-brand .brand-tag { color: rgba(255,255,255,.55); }
 .footer-copy { max-width: 420px; margin: 28px 0 0; color: rgba(255,255,255,.58); font-size: 13px; }
