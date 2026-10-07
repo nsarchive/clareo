@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs><linearGradient id="accent" x1="43" y1="2" x2="64" y2="62" gradientUnits="userSpaceOnUse"><stop stop-color="#18d5ee"/><stop offset="1" stop-color="#50bfff"/></linearGradient></defs>
   <rect width="64" height="64" rx="14" fill="#ffffff"/>
-  <path d="M47 17a21 21 0 1 0 0 30" fill="none" stroke="#07172f" stroke-width="12" stroke-linecap="butt"/>
-  <path d="M47 17h8v12h-8zM47 35h8v12h-8z" fill="#18d5ee"/>
+  <g transform="translate(6.4 6.4) scale(.8)">
+    <path d="M50 9H31a23 23 0 1 0 0 46h19" fill="none" stroke="#07172f" stroke-width="14" stroke-linecap="butt" stroke-linejoin="round"/>
+    <path d="M43 2h14a7 7 0 0 1 0 14H43zM43 48h14a7 7 0 0 1 0 14H43z" fill="url(#accent)"/>
+  </g>
 </svg>

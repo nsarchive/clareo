@@ -99,26 +99,18 @@ h1, h2, h3 {
 
 .brand-mark {
   width: 42px;
-  aspect-ratio: 1;
-  position: relative;
-  border: 10px solid var(--navy);
-  border-right-color: transparent;
-  border-radius: 50%;
+  height: 42px;
+  flex: 0 0 auto;
+  color: var(--navy);
 }
 
-.brand-mark::before,
-.brand-mark::after {
-  content: "";
-  position: absolute;
-  right: -10px;
-  width: 13px;
-  height: 10px;
-  background: linear-gradient(135deg, var(--cyan), #50bfff);
-  border-radius: 0 4px 4px 0;
+.brand-mark-body {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 14;
+  stroke-linecap: butt;
+  stroke-linejoin: round;
 }
-
-.brand-mark::before { top: -10px; }
-.brand-mark::after { bottom: -10px; }
 
 .brand-copy { display: grid; line-height: 1.1; }
 .brand-name { font-size: 28px; font-weight: 800; letter-spacing: -0.05em; }
@@ -500,7 +492,7 @@ h1, h2, h3 {
 
 .site-footer { padding-block: 72px 30px; color: var(--white); background: #041024; }
 .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 60px; }
-.footer-brand .brand-mark { border-color: var(--white); border-right-color: transparent; }
+.footer-brand .brand-mark { color: var(--white); }
 .footer-brand .brand-name { color: var(--white); }
 .footer-brand .brand-tag { color: rgba(255,255,255,.55); }
 .footer-copy { max-width: 420px; margin: 28px 0 0; color: rgba(255,255,255,.58); font-size: 13px; }
@@ -541,10 +533,7 @@ h1, h2, h3 {
 @media (max-width: 720px) {
   body { font-size: 15px; }
   .container { width: min(calc(100% - 32px), var(--max)); }
-  .brand-mark { width: 34px; border-width: 8px; }
-  .brand-mark::before, .brand-mark::after { right: -8px; width: 11px; height: 8px; }
-  .brand-mark::before { top: -8px; }
-  .brand-mark::after { bottom: -8px; }
+  .brand-mark { width: 34px; height: 34px; }
   .brand-name { font-size: 23px; }
   .brand-tag { font-size: 8px; }
   .hero { min-height: 720px; }
