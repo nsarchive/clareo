@@ -1,396 +1,365 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>ホームページの住所と置き場所の準備｜クラレオ</title>
-<style>
-:root{
-  --navy:#07172f; --blue:#1854e8; --cyan:#18d5ee; --cyan-soft:#dffaff;
-  --ink:#0d1b2f; --muted:#5a6878; --paper:#f4f8fb; --line:#d7e1e9; --white:#fff;
-  --red:#d92b2b; --red-soft:#fdecec; --orange-soft:#fff4e5; --green:#13856b; --green-soft:#e7f6f1;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;font-size:18px;line-height:1.85;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 16px}
-header.top{background:var(--navy);color:var(--white);padding:36px 0 40px}
-.brand{font-size:13px;letter-spacing:.18em;opacity:.8}
-header.top h1{font-size:28px;line-height:1.4;margin-top:14px;font-weight:800}
-header.top p{margin-top:12px;font-size:16px;color:rgba(255,255,255,.85)}
-.toc{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:24px 0}
-.toc b{display:block;margin-bottom:6px}
-.toc ol{padding-left:1.4em;font-size:16px}
-.toc a{color:var(--blue)}
-section{margin:36px 0}
-h2{font-size:24px;line-height:1.4;font-weight:800;margin-bottom:14px;padding-top:8px;border-top:4px solid var(--navy)}
-h2 .num{display:inline-block;background:var(--navy);color:var(--white);border-radius:8px;padding:0 10px;margin-right:8px;font-size:20px}
-h3{font-size:19px;font-weight:800;margin:22px 0 8px}
-p{margin:10px 0}
-.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin:14px 0}
-.analogy{display:grid;grid-template-columns:1fr;gap:12px}
-.analogy .item{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.analogy .item b{font-size:19px}
-.analogy .item .eq{color:var(--blue);font-weight:800}
-.note{background:var(--cyan-soft);border-radius:14px;padding:14px 18px;margin:14px 0}
-.warn{background:var(--orange-soft);border-left:6px solid #e08a00;border-radius:10px;padding:14px 18px;margin:14px 0}
-.stop{background:var(--red-soft);border-left:6px solid var(--red);border-radius:10px;padding:14px 18px;margin:14px 0}
-.ok{background:var(--green-soft);border-left:6px solid var(--green);border-radius:10px;padding:14px 18px;margin:14px 0}
-.note b,.warn b,.stop b,.ok b{display:block;margin-bottom:2px}
-.steps{list-style:none;counter-reset:s}
-.steps>li{counter-increment:s;position:relative;padding-left:52px;margin:26px 0}
-.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center;font-size:18px}
-.steps>li>p:first-child{margin-top:4px;font-weight:700}
-figure{margin:12px 0}
-figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:#fff;display:block}
-figcaption{font-size:14px;color:var(--muted);margin-top:4px}
-.red{color:var(--red);font-weight:800}
-.key{display:inline-block;background:var(--navy);color:#fff;border-radius:6px;padding:0 8px;font-weight:700}
-.val{display:inline-block;background:var(--white);border:2px solid var(--blue);border-radius:8px;padding:2px 10px;font-family:Menlo,Consolas,monospace;font-weight:700;font-size:17px;word-break:break-all}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:16px;margin:10px 0}
-th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-th{background:#eef3f8;width:34%}
-.flow{list-style:none}
-.flow li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:8px 0;display:flex;gap:12px;align-items:flex-start}
-.flow .n{flex:0 0 32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center}
-.flow .n.later{background:#9aa7b5}
-.who{font-size:13px;font-weight:700;border-radius:4px;padding:1px 7px;margin-left:6px;white-space:nowrap}
-.who.you{background:#fff1e0;color:#a35a0b}
-.who.us{background:var(--cyan-soft);color:#0b6b7a}
-.memo td:last-child{height:44px}
-.check{list-style:none}
-.check li{padding-left:34px;position:relative;margin:8px 0}
-.check li::before{content:"";position:absolute;left:0;top:6px;width:20px;height:20px;border:2px solid var(--blue);border-radius:4px}
-details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0}
-summary{font-weight:700;cursor:pointer}
-details p{font-size:16px}
-footer{text-align:center;font-size:13px;color:var(--muted);padding:30px 0 50px}
-@media (min-width:640px){.analogy{grid-template-columns:1fr 1fr 1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="site-base-path" content="">
+  <title>ホームページの住所と土地の準備｜clareo</title>
+  <meta name="description" content="ドメインとサーバーを、お店さまの名義でご用意いただくための手順書です。">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="ホームページの住所と土地の準備｜clareo">
+  <meta property="og:description" content="ドメインとサーバーを、お店さまの名義でご用意いただくための手順書です。">
+  <meta property="og:url" content="https://clareo.yamanashi.jp/guide/domain/">
+  <meta property="og:image" content="https://clareo.yamanashi.jp/assets/clareo-mark.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#07172f">
+  <link rel="icon" href="/assets/clareo-c-monogram.png" type="image/png">
+  <link rel="stylesheet" href="/styles.css?v=20261007b">
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="クラレオ トップ">
+  <span class="brand-mark" aria-hidden="true"><img src="/assets/clareo-c-monogram.png" alt=""></span>
+  <span class="brand-copy"><span class="brand-name">clareo</span><span class="brand-tag">山梨のホームページ制作</span></span></a>
+      <nav class="global-nav" aria-label="メインナビゲーション">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="/about/" data-nav-path="/about/">クラレオについて</a></li><li><a class="nav-link" href="/service/" data-nav-path="/service/">サービス</a></li><li><a class="nav-link" href="/price/" data-nav-path="/price/">料金</a></li><li><a class="nav-link" href="/flow/" data-nav-path="/flow/">ご依頼の流れ</a></li><li><a class="nav-link" href="/faq/" data-nav-path="/faq/">よくある質問</a></li>
+        </ul>
+      </nav>
+      <a class="header-cta" href="/contact/">お問い合わせ</a>
+      <button class="menu-button" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  
+  
+  <style>
+.g-lead{max-width:760px}
+.g-card{background:var(--white);border:1px solid var(--line);border-radius:22px;padding:24px 26px;margin:22px 0}
+.g-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.g-grid3 div{background:var(--paper);border-radius:18px;padding:18px}
+.g-grid3 b{display:block;font-size:18px;color:var(--navy)}
+.g-grid3 .eq{display:block;color:var(--blue);font-weight:800;margin:2px 0 6px}
+.g-grid3 small{color:var(--muted);font-size:13px;line-height:1.7;display:block}
+.g-flow{list-style:none;padding:0;margin:18px 0;display:grid;gap:10px}
+.g-flow li{display:flex;gap:14px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.g-flow .n{flex:0 0 36px;height:36px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;display:grid;place-items:center}
+.g-flow .n.later{background:#a7b3c0}
+.g-flow b{display:block;color:var(--ink)}
+.g-flow small{color:var(--muted);font-size:13px}
+.who{font-size:11px;font-weight:800;border-radius:999px;padding:2px 9px;margin-left:6px;vertical-align:2px;white-space:nowrap}
+.who.you{background:#fff1e0;color:#a35a0b}
+.who.us{background:var(--cyan-soft);color:#0b6b7a}
+.g-steps{list-style:none;counter-reset:s;padding:0;margin:0}
+.g-steps>li{counter-increment:s;position:relative;padding:0 0 0 58px;margin:0 0 40px}
+.g-steps>li::before{content:counter(s);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;font-weight:800;display:grid;place-items:center}
+.g-steps>li>p.do{margin:4px 0 12px;color:var(--ink)!important;font-weight:700;font-size:17px}
+.g-steps figure{margin:12px 0 0}
+.g-steps figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(5,25,56,.07)}
+.g-steps figure.narrow img{max-width:420px}
+.article-section .g-steps p{color:var(--muted)}
+.val{display:inline-block;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:2px 12px;font-family:Menlo,Consolas,monospace;font-weight:700;color:var(--navy);word-break:break-all}
+.g-alert{border-radius:16px;padding:14px 18px;margin:14px 0;font-size:15px;line-height:1.8}
+.g-alert b{display:block;margin-bottom:2px}
+.g-alert.stop{background:#fdecef;color:#7d1630}
+.g-alert.warn{background:#fff4e5;color:#7a4508}
+.g-alert.ok{background:#e7f6f1;color:#0d5c49}
+.g-alert.info{background:var(--cyan-soft);color:#0b4f5a}
+details.g-more{margin:12px 0 0;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+details.g-more summary{cursor:pointer;padding:12px 16px;font-weight:700;font-size:14px;color:var(--blue);list-style:none}
+details.g-more summary::before{content:"＋ "}
+details.g-more[open] summary::before{content:"－ "}
+details.g-more .in{padding:0 16px 14px}
+.g-table{width:100%;border-collapse:collapse;font-size:14px}
+.g-table th,.g-table td{border-top:1px solid var(--line);padding:10px 8px;text-align:left;vertical-align:top;line-height:1.7}
+.g-table th{width:36%;color:var(--navy);font-weight:700}
+.g-table td{color:var(--muted)}
+.g-check{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+.g-check li{position:relative;padding-left:30px;color:var(--ink)}
+.g-check li::before{content:"";position:absolute;left:0;top:7px;width:18px;height:18px;border:2px solid var(--blue);border-radius:5px}
+.g-faq details{border-top:1px solid var(--line);padding:14px 0}
+.g-faq details:last-child{border-bottom:1px solid var(--line)}
+.g-faq summary{cursor:pointer;font-weight:700;color:var(--ink)}
+.g-faq details p{margin:8px 0 0}
+@media (max-width:760px){
+  .g-grid3{grid-template-columns:1fr}
+  .g-steps>li{padding-left:44px}
+  .g-steps>li::before{width:32px;height:32px;font-size:15px;top:0}
+  .g-card{padding:20px}
+}
+</style>
 
-<header class="top">
-  <div class="wrap">
-    <div class="brand">CLAREO ｜ ホームページ制作のご案内</div>
-    <h1>ホームページの「住所」と「置き場所」の準備のしかた</h1>
-    <p>この手順書を上から順番に見ながら進めれば、パソコンが苦手な方でも最後までできるように作っています。所要時間は30分ほどです。</p>
+  <div class="page-hero">
+    <div class="container">
+      <p class="page-kicker">Clareo / Guide</p>
+      <h1 class="page-title-long">ホームページの「住所」と「土地」の準備</h1>
+      <p>ドメインとサーバーを、お店さまの名義でご用意いただくための手順書です。上から順番に進めれば、30分ほどで終わります。</p>
+    </div>
   </div>
-</header>
 
-<main class="wrap">
+  <main id="main" class="section"><div class="container content-layout">
+    <aside class="toc"><p class="toc-title">このページの内容</p><ul>
+      <li><a href="#about">はじめに ↓</a></li>
+      <li><a href="#step1">手順1 ドメインを取る ↓</a></li>
+      <li><a href="#step2">手順2 Cloudflareに登録 ↓</a></li>
+      <li><a href="#step3">手順3 クラレオを招待 ↓</a></li>
+      <li><a href="#step5">手順5 最後の設定 ↓</a></li>
+      <li><a href="#faq">困ったときは ↓</a></li>
+    </ul></aside>
+    <article class="article">
 
-<nav class="toc">
-  <b>もくじ</b>
-  <ol>
-    <li><a href="#about">まずは言葉の説明（ドメイン・サーバーって何？）</a></li>
-    <li><a href="#prepare">始める前に用意するもの</a></li>
-    <li><a href="#flow">全体の流れ</a></li>
-    <li><a href="#step1">【手順1】スタードメインでドメインを取る</a></li>
-    <li><a href="#step2">【手順2】Cloudflare（クラウドフレア）に登録する</a></li>
-    <li><a href="#step3">【手順3】クラレオを招待する</a></li>
-    <li><a href="#done">終わったら、LINEで一言</a></li>
-    <li><a href="#step5">【手順5】最後の設定（あとでお願いします）</a></li>
-    <li><a href="#faq">困ったときは</a></li>
-  </ol>
-</nav>
+    <!-- はじめに -->
+    <section class="article-section" id="about">
+      <p class="section-index">00</p>
+      <h2>はじめに</h2>
+      <p class="g-lead">ホームページを公開するには、お店と同じように「住所」と「土地」が必要です。</p>
+      <div class="g-grid3">
+        <div><b>ドメイン</b><span class="eq">＝ 住所</span><small>例：clareo-sample-shop.jp<br>この住所でホームページが開きます。</small></div>
+        <div><b>サーバー</b><span class="eq">＝ 土地</span><small>ホームページを置いておく場所です。</small></div>
+        <div><b>ホームページ</b><span class="eq">＝ お店</span><small>こちらはクラレオが作ります。</small></div>
+      </div>
 
-<!-- ============ 1 ============ -->
-<section id="about">
-  <h2><span class="num">1</span>まずは言葉の説明</h2>
-  <p>ホームページを公開するには、<b>「住所」</b>と<b>「土地」</b>が必要です。お店を建てるときと同じように考えてください。</p>
+      <div class="g-card">
+        <p><b style="color:var(--navy)">使う会社は2つです</b></p>
+        <table class="g-table">
+          <tr><th>スタードメイン</th><td><b>住所（ドメイン）を買う</b>日本の会社です。費用はドメインの種類によって違います。<b>金額はクラレオからLINEでお伝えします。</b>毎年、更新の費用がかかります。</td></tr>
+          <tr><th>Cloudflare<br>（クラウドフレア）</th><td><b>土地（サーバー）を無料で借りる</b>会社です。<b>0円</b>のまま使います。画面は日本語にできます。</td></tr>
+        </table>
+      </div>
 
-  <div class="analogy">
-    <div class="item"><b>ドメイン</b><br><span class="eq">＝ ホームページの住所</span><br>例：<span class="val">madetail.jp</span><br>この住所を入れると、お店のホームページが開きます。</div>
-    <div class="item"><b>サーバー</b><br><span class="eq">＝ ホームページを建てる土地</span><br>ホームページのデータを置いておく場所です。</div>
-    <div class="item"><b>ホームページ</b><br><span class="eq">＝ 土地に建てるお店</span><br>こちらはクラレオが作ります。</div>
-  </div>
+      <p>持ち主はお店さまなので、<b>お店さまの名前で</b>登録していただきます。こうしておけば、将来もずっとお店さまが自由に使えます。</p>
 
-  <h3>今回使う2つの会社</h3>
-  <table>
-    <tr><th>スタードメイン</th><td><b>住所（ドメイン）を買う会社</b>です。日本の会社です。<br>費用：1年目 1,900円、2年目からは毎年 3,201円（「.jp」の場合・税込）</td></tr>
-    <tr><th>Cloudflare<br>（クラウドフレア）</th><td><b>土地（サーバー）を無料で貸してくれる会社</b>です。アメリカの会社ですが、画面は日本語にできます。<br>費用：<b>0円</b>（無料のまま使います。お支払い情報の入力も不要です）</td></tr>
-  </table>
+      <h3>全体の流れ</h3>
+      <ol class="g-flow">
+        <li><span class="n">1</span><div><b>スタードメインでドメインを取る<span class="who you">お店さま</span></b><small>約15分</small></div></li>
+        <li><span class="n">2</span><div><b>Cloudflareに登録する<span class="who you">お店さま</span></b><small>約5分・無料</small></div></li>
+        <li><span class="n">3</span><div><b>クラレオを招待する<span class="who you">お店さま</span></b><small>約5分</small></div></li>
+        <li><span class="n later">4</span><div><b>つなぐ設定をする<span class="who us">クラレオ</span></b><small>終わったらLINEでご連絡します</small></div></li>
+        <li><span class="n later">5</span><div><b>最後の設定を1か所だけ<span class="who you">お店さま</span></b><small>LINEでお送りする文字を貼り付けるだけ</small></div></li>
+      </ol>
+      <div class="g-alert info"><b>まずは手順1〜3をお願いします。</b>手順5は、クラレオからLINEが届いてからで大丈夫です。</div>
 
-  <h3>なぜ、お店さまの名前で登録するの？</h3>
-  <p>家や土地と同じで、<b>ホームページの住所と土地の持ち主は、お店さまです</b>。クラレオの名前で登録してしまうと、将来クラレオとのお付き合いがなくなったときに、お店さまが自由に使えなくなってしまいます。そうならないように、最初からお店さまの名前で用意していただきます。</p>
+      <h3>用意するもの</h3>
+      <ul class="g-check">
+        <li>パソコン（スマホでもできますが、パソコンがおすすめです）</li>
+        <li>ふだん見ているメールアドレス</li>
+        <li>クレジットカード（コンビニ払い・銀行振込も選べます）</li>
+        <li>紙とペン（パスワードを書いておくため）</li>
+        <li>LINEでお伝えしたドメイン名</li>
+      </ul>
+      <div class="g-alert stop"><b>パスワードは、クラレオにも誰にも送らないでください</b>紙に書いて、お店さまで保管してください。クラレオは「招待」で作業するので、パスワードは必要ありません。</div>
+    </section>
 
-  <h3>お店さまにお願いすること・クラレオがやること</h3>
-  <table>
-    <tr><th>お店さま</th><td>2つの会社に登録して、クラレオを「お手伝い役」として招待する（この手順書の手順1〜3と5）</td></tr>
-    <tr><th>クラレオ</th><td>招待を受けて、ホームページを公開するための難しい設定をすべて行う</td></tr>
-  </table>
-</section>
+    <!-- 手順1 -->
+    <section class="article-section" id="step1">
+      <p class="section-index">01</p>
+      <h2>スタードメインでドメインを取る</h2>
+      <p>写真の<b style="color:#e11d48">赤い枠</b>を押してください。写真のドメイン名と金額は例です。写真はタップすると大きく見られます。</p>
 
-<!-- ============ 2 ============ -->
-<section id="prepare">
-  <h2><span class="num">2</span>始める前に用意するもの</h2>
-  <ul class="check">
-    <li><b>パソコン</b>（スマホでもできますが、入力する項目が多いのでパソコンがおすすめです）</li>
-    <li><b>メールアドレス</b>（ふだん見ているもの。確認のメールが届きます）</li>
-    <li><b>クレジットカード</b>（ドメイン代 1,900円のお支払い用。コンビニ払い・銀行振込も選べます）</li>
-    <li><b>紙とペン</b>（パスワードを書いておくため）</li>
-    <li><b>LINEでお伝えしたドメイン名</b>（例：madetail.jp）</li>
-  </ul>
+      <ol class="g-steps">
+        <li>
+          <p class="do">スタードメインを開いて、ドメイン名を検索します。</p>
+          <p><span class="val">https://www.star-domain.jp/</span> を開き、「まずは欲しいドメイン名を検索！」に<b>「.jp」などの前の部分だけ</b>を入れて「検索」を押します。</p>
+          <figure><a href="shots/s01_search.jpg" target="_blank" rel="noopener"><img src="shots/s01_search.jpg" alt="ドメイン名の検索欄" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">右側の「ドメインのみ申込」の「選択する」を押します。</p>
+          <figure><a href="shots/s02_domain_only.jpg" target="_blank" rel="noopener"><img src="shots/s02_domain_only.jpg" alt="ドメインのみ申込を選ぶ" loading="lazy"></a></figure>
+          <div class="g-alert stop"><b>左の「サーバーとセットで申込（オススメ！）」は選ばないでください</b>有料のサーバー契約になります。サーバーはCloudflareの無料のものを使います。</div>
+        </li>
+        <li>
+          <p class="do">LINEでお伝えした種類（「.jp」など）にチェックを入れて、「取得手続きに進む」を押します。</p>
+          <p>上のボタンがオレンジ色の「選択中」になっていればOKです。</p>
+          <figure><a href="shots/s03_select.jpg" target="_blank" rel="noopener"><img src="shots/s03_select.jpg" alt="ドメインの種類にチェックを入れる" loading="lazy"></a></figure>
+          <div class="g-alert warn"><b>「取得できません」と出たとき</b>ほかの人が使っている住所です。LINEでご連絡ください。</div>
+        </li>
+        <li>
+          <p class="do">契約期間は「1年」のまま、「取得手続きに進む」を押します。</p>
+          <p>金額が、LINEでお伝えしたものと同じか確かめてください。</p>
+          <figure><a href="shots/s04_confirm.jpg" target="_blank" rel="noopener"><img src="shots/s04_confirm.jpg" alt="申し込み内容の確認" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">左側の「Star8アカウントの登録へ」を押します。</p>
+          <p>Star8（スターエイト）は、スタードメインの会員登録の名前です。</p>
+          <figure><a href="shots/s05_new_account.jpg" target="_blank" rel="noopener"><img src="shots/s05_new_account.jpg" alt="Star8アカウントの登録へ" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">メールアドレス・パスワードを入れて、契約者種別を選びます。</p>
+          <figure><a href="shots/s06_form1.jpg" target="_blank" rel="noopener"><img src="shots/s06_form1.jpg" alt="メールアドレスとパスワードの入力欄" loading="lazy"></a></figure>
+          <details class="g-more"><summary>何を入れればいい？</summary><div class="in"><table class="g-table">
+            <tr><th>メールアドレス</th><td>ふだん見ているもの</td></tr>
+            <tr><th>パスワード</th><td>半角の英数字で8文字以上。紙に書いておく</td></tr>
+            <tr><th>契約者種別</th><td>個人事業は「個人」、会社は「法人」。あとから変えられません</td></tr>
+            <tr><th>契約法人名など</th><td>「法人」の方だけ入れます</td></tr>
+          </table></div></details>
+        </li>
+        <li>
+          <p class="do">お名前と郵便番号を入れて、「郵便番号から住所入力」を押します。</p>
+          <figure><a href="shots/s07_form2.jpg" target="_blank" rel="noopener"><img src="shots/s07_form2.jpg" alt="名前と郵便番号の入力欄" loading="lazy"></a></figure>
+          <details class="g-more"><summary>ローマ字の名前の書き方</summary><div class="in"><p>例：山田 太郎 → <span class="val">Yamada</span> <span class="val">Taro</span></p></div></details>
+        </li>
+        <li>
+          <p class="do">住所と、ローマ字の住所を入れます。</p>
+          <figure><a href="shots/s08_form3.jpg" target="_blank" rel="noopener"><img src="shots/s08_form3.jpg" alt="住所とローマ字の住所の入力欄" loading="lazy"></a></figure>
+          <details class="g-more"><summary>ローマ字の住所の書き方</summary><div class="in"><table class="g-table">
+            <tr><th>市区町村</th><td>例：甲府市丸の内 → <span class="val">Kofu-shi Marunouchi</span><br>「〇〇市」は「-shi」、「〇〇町」は「-cho」</td></tr>
+            <tr><th>丁目番地</th><td>数字はそのまま。例：<span class="val">1-2-3</span></td></tr>
+            <tr><th>建物名</th><td>なければ空けたままでOK</td></tr>
+          </table><p style="margin-top:8px">わからないときは、LINEで住所を送っていただければローマ字にしてお返しします。</p></div></details>
+        </li>
+        <li>
+          <p class="do">電話番号を入れて、2か所を確かめて「確認画面へ進む」を押します。</p>
+          <figure><a href="shots/s09_form4.jpg" target="_blank" rel="noopener"><img src="shots/s09_form4.jpg" alt="電話番号、WHOIS代理公開、利用規約の同意" loading="lazy"></a></figure>
+          <details class="g-more"><summary>チェックの意味</summary><div class="in"><table class="g-table">
+            <tr><th>WHOIS代理公開</th><td><b>チェックしたまま</b>。お店さまの住所や電話番号が、ネット上に公開されにくくなる無料のサービスです</td></tr>
+            <tr><th>利用規約</th><td>チェックを入れます</td></tr>
+            <tr><th>FAX番号</th><td>なければ空けたままでOK</td></tr>
+          </table></div></details>
+        </li>
+        <li>
+          <p class="do">お支払い方法を選び、「同意する」にチェックして「申し込む」を押します。</p>
+          <p>クレジットカードがおすすめです。「サーバー」や「オプション」をすすめられても、何も選ばずに進めてください。完了すると、スタードメインからメールが届きます。</p>
+          <div class="g-alert ok"><b>手順1はおしまいです</b>取ったドメイン名を紙に書いておいてください。</div>
+        </li>
+      </ol>
+    </section>
 
-  <h3>メモ用の表（印刷するか、紙に書き写してください）</h3>
-  <table class="memo">
-    <tr><th>取ったドメイン名</th><td></td></tr>
-    <tr><th>スタードメインのメールアドレス</th><td></td></tr>
-    <tr><th>スタードメインのパスワード</th><td></td></tr>
-    <tr><th>Cloudflareのメールアドレス</th><td></td></tr>
-    <tr><th>Cloudflareのパスワード</th><td></td></tr>
-  </table>
-  <div class="stop"><b>パスワードは、クラレオにも誰にも送らないでください</b>このメモは、お店さまで大切に保管してください。クラレオは「招待」のしくみを使って作業するので、パスワードは必要ありません。</div>
-</section>
+    <!-- 手順2 -->
+    <section class="article-section" id="step2">
+      <p class="section-index">02</p>
+      <h2>Cloudflareに登録する</h2>
+      <p>無料の「土地」を借りるための登録です。お支払い情報の入力はありません。</p>
 
-<!-- ============ 3 ============ -->
-<section id="flow">
-  <h2><span class="num">3</span>全体の流れ</h2>
-  <ol class="flow">
-    <li><span class="n">1</span><div><b>スタードメインでドメインを取る</b><span class="who you">お店さま</span><br>約15分</div></li>
-    <li><span class="n">2</span><div><b>Cloudflareに登録する</b><span class="who you">お店さま</span><br>約5分・無料</div></li>
-    <li><span class="n">3</span><div><b>クラレオを招待する</b><span class="who you">お店さま</span><br>約5分</div></li>
-    <li><span class="n later">4</span><div><b>つなぐ設定をする</b><span class="who us">クラレオ</span><br>終わったら、LINEで「2つの文字」をお送りします</div></li>
-    <li><span class="n later">5</span><div><b>最後の設定を1か所だけ</b><span class="who you">お店さま</span><br>スタードメインで、お送りした文字を貼り付けるだけ（約5分）</div></li>
-  </ol>
-  <div class="note"><b>今回お願いしたいのは、手順1〜3です。</b>手順5は、クラレオからLINEでご連絡したあとにお願いします。途中でやめても大丈夫です。続きからできます。</div>
-</section>
+      <ol class="g-steps">
+        <li>
+          <p class="do">登録ページを開いて、右上で「日本語」を選びます。</p>
+          <p><span class="val">https://dash.cloudflare.com/sign-up</span></p>
+          <figure class="narrow"><a href="shots/c01_language.jpg" target="_blank" rel="noopener"><img src="shots/c01_language.jpg" alt="右上で日本語を選ぶ" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">メールとパスワードを入れて、「サインアップ」を押します。</p>
+          <p>「私はロボットではありません」が出たら、チェックを入れてください。パスワードは紙に書いておいてください。</p>
+          <figure class="narrow"><a href="shots/c02_signup.jpg" target="_blank" rel="noopener"><img src="shots/c02_signup.jpg" alt="メール、パスワード、サインアップ" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">届いた確認メールのボタンを押します。</p>
+          <p>英語のメールです。見つからないときは「迷惑メール」のフォルダを見てください。</p>
+          <div class="g-alert stop"><b>「ドメインを追加」「プランを選ぶ」などが出ても、何も入力・購入しないでください</b>左上のオレンジ色の雲のマークを押すと、ホームに戻れます。</div>
+        </li>
+      </ol>
+    </section>
 
-<!-- ============ 4 ============ -->
-<section id="step1">
-  <h2><span class="num">4</span>【手順1】スタードメインでドメインを取る</h2>
-  <p>画面の写真は、例として「madetail.jp」を取る場合のものです。<span class="red">赤い枠</span>のところを押してください。</p>
+    <!-- 手順3 -->
+    <section class="article-section" id="step3">
+      <p class="section-index">03</p>
+      <h2>クラレオを招待する</h2>
+      <p>クラレオを「お手伝い役」として招待します。パスワードを教えていただかなくても、クラレオが設定できるようになります。</p>
 
-  <ol class="steps">
-    <li>
-      <p>スタードメインのページを開きます。</p>
-      <p>パソコンの検索で「スタードメイン」と調べるか、次の住所を開いてください。<br><span class="val">https://www.star-domain.jp/</span></p>
-    </li>
-    <li>
-      <p>少し下にある「まずは欲しいドメイン名を検索！」の欄に、ドメイン名を入れて「検索」を押します。</p>
-      <p>入れるのは<b>「.jp」の前の部分だけ</b>です。例：madetail.jp なら <span class="val">madetail</span></p>
-      <figure><img src="img/s01_search.jpg" alt="ドメイン名の検索欄と検索ボタン"></figure>
-    </li>
-    <li>
-      <p>「お申込内容の選択」で、<b>右側の「ドメインのみ申込」の「選択する」</b>を押します。</p>
-      <figure><img src="img/s02_domain_only.jpg" alt="サーバーとセットで申込と、ドメインのみ申込の選択画面"></figure>
-      <div class="stop"><b>左の「サーバーとセットで申込（オススメ！）」は選ばないでください</b>「オススメ」と書いてありますが、有料のサーバーの契約になります。サーバーはCloudflareで無料のものを使うので、必要ありません。</div>
-    </li>
-    <li>
-      <p>その下の検索結果で、<b>「.jp」の四角にチェック</b>を入れます。</p>
-      <p>右側のボタンが<b>オレンジ色の「選択中」</b>になっていることを確かめてから、一番下の<b>「取得手続きに進む」</b>を押します。</p>
-      <figure><img src="img/s03_select_jp.jpg" alt="ドメインのみ申込が選択中になり、.jpにチェックを入れた画面"></figure>
-      <div class="warn"><b>「取得できません」と出たとき</b>ほかの人がすでに使っている住所です。何もせず、LINEでご連絡ください。別の候補をお伝えします。</div>
-    </li>
-    <li>
-      <p>「申し込み内容の確認」が出ます。<b>契約期間は「1年」のまま</b>で、金額が<b>1,900円</b>になっていることを確かめて、<b>「取得手続きに進む」</b>を押します。</p>
-      <figure><img src="img/s04_confirm.jpg" alt="申し込み内容の確認画面。契約期間1年、1,900円"></figure>
-    </li>
-    <li>
-      <p>「ログイン・アカウント登録」の画面になります。初めての方は、左側の<b>「Star8アカウントの登録へ」</b>を押します。</p>
-      <p>「Star8（スターエイト）」は、スタードメインの会員登録の名前です。</p>
-      <figure><img src="img/s05_new_account.jpg" alt="初めての方のStar8アカウントの登録へボタン"></figure>
-    </li>
-    <li>
-      <p>お店さまの情報を入れていきます。<b>「必須」と書いてある欄はすべて</b>入れてください。</p>
-      <figure><img src="img/s06_form1.jpg" alt="メールアドレス、パスワード、契約者種別の入力欄"></figure>
-      <table>
-        <tr><th>メールアドレス</th><td>ふだん見ているメールアドレス</td></tr>
-        <tr><th>パスワード</th><td>半角の英語と数字で8文字以上。<b>メモ用の表に書いてください</b></td></tr>
-        <tr><th>パスワード（確認）</th><td>上と同じものをもう一度</td></tr>
-        <tr><th>契約者種別</th><td>個人事業の方は<b>「個人」</b>、株式会社などの会社の方は<b>「法人」</b><br>※あとから名前を変えられないので、気をつけて選んでください</td></tr>
-        <tr><th>契約法人名など</th><td>「法人」を選んだ方だけ入れます。「個人」の方は空けたままで大丈夫です</td></tr>
-      </table>
-    </li>
-    <li>
-      <p>名前と住所を入れます。</p>
-      <figure><img src="img/s07_form2.jpg" alt="名前、カナ、ローマ字、郵便番号の入力欄"></figure>
-      <table>
-        <tr><th>名前・名前(カナ)</th><td>代表者さまのお名前</td></tr>
-        <tr><th>名前(ローマ字)</th><td>例：山田 太郎 → <span class="val">Yamada</span> <span class="val">Taro</span></td></tr>
-        <tr><th>郵便番号</th><td>入れたあと<b>「郵便番号から住所入力」</b>を押すと、都道府県と市区町村が自動で入ります</td></tr>
-        <tr><th>住所</th><td>お店の住所。「丁目番地」には番地の数字を入れます（例：2-13-16）</td></tr>
-      </table>
-    </li>
-    <li>
-      <p>「住所(ローマ字)」を入れます。ここがいちばん迷いやすいところです。</p>
-      <figure><img src="img/s08_form3.jpg" alt="ローマ字の住所の入力欄"></figure>
-      <table>
-        <tr><th>市区町村</th><td>例：山梨県甲府市丸の内 → <span class="val">Kofu-shi Marunouchi</span></td></tr>
-        <tr><th>丁目番地</th><td>数字はそのまま。例：<span class="val">1-2-3</span></td></tr>
-        <tr><th>建物名</th><td>なければ空けたままで大丈夫です</td></tr>
-      </table>
-      <div class="note"><b>ローマ字がわからないとき</b>「〇〇市」は「〇〇-shi」、「〇〇町」は「〇〇-cho」と書けば大丈夫です。地名の読み方がわからないときは、LINEで住所を送っていただければ、ローマ字にしてお返しします。</div>
-    </li>
-    <li>
-      <p>電話番号を入れて、一番下まで進みます。</p>
-      <figure><img src="img/s09_form4.jpg" alt="電話番号、WHOIS代理公開サービス、利用規約の同意、確認画面へ進むボタン"></figure>
-      <table>
-        <tr><th>電話番号</th><td>お店の電話番号（携帯でも大丈夫です）</td></tr>
-        <tr><th>FAX番号</th><td>なければ空けたままで大丈夫です</td></tr>
-        <tr><th>WHOIS代理公開サービス</th><td><b>「希望する」にチェックが入ったまま</b>にします<br>（お店さまの住所や電話番号が、インターネット上に公開されにくくなる無料のサービスです）</td></tr>
-        <tr><th>利用規約と個人情報の取り扱い</th><td><b>チェックを入れます</b></td></tr>
-      </table>
-      <p>最後に<b>「確認画面へ進む」</b>を押します。</p>
-    </li>
-    <li>
-      <p>このあと「お支払い情報の入力」→「内容の確認・規約への同意」→「お申込み完了」と進みます。</p>
-      <p>ここから先は、実際に申し込まないと画面が出ないため、写真はありません。次のとおりに進めてください。</p>
-      <table>
-        <tr><th>お支払い方法</th><td><b>クレジットカード</b>がおすすめです（すぐに手続きが終わります）。コンビニ払い・銀行振込も選べます</td></tr>
-        <tr><th>確認の画面</th><td>ドメイン名と金額（1,900円）が合っているか見て、<b>「同意する」</b>にチェックを入れ、<b>「申し込む」</b>を押します</td></tr>
-        <tr><th>完了</th><td>スタードメインから、お申し込みの内容とお支払いのメールが届きます</td></tr>
-      </table>
-      <div class="warn"><b>途中で「サーバー」や「オプション」をすすめられたら</b>すべて選ばずに進めてください。追加で必要なものはありません。</div>
-      <div class="ok"><b>これで手順1はおしまいです</b>取ったドメイン名を、メモ用の表に書いておいてください。</div>
-    </li>
-  </ol>
-</section>
+      <ol class="g-steps">
+        <li>
+          <p class="do">左のメニューの一番下、「アカウントの管理」→「メンバー」を押します。</p>
+          <figure class="narrow"><a href="shots/c03_menu.jpg" target="_blank" rel="noopener"><img src="shots/c03_menu.jpg" alt="アカウントの管理とメンバー" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">右上の「＋メンバーを招待」を押します。</p>
+          <figure><a href="shots/c04_members.jpg" target="_blank" rel="noopener"><img src="shots/c04_members.jpg" alt="メンバーを招待ボタン" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">メールアドレスの欄に、クラレオのメールアドレスを入れます。</p>
+          <p><span class="val">clareo.jp@gmail.com</span></p>
+          <figure><a href="shots/c05_email.jpg" target="_blank" rel="noopener"><img src="shots/c05_email.jpg" alt="メールアドレスを追加する欄" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">一覧の上から3番目「Administrator」の右のスイッチをオンにします。</p>
+          <figure><a href="shots/c06_role.jpg" target="_blank" rel="noopener"><img src="shots/c06_role.jpg" alt="Administratorのスイッチ" loading="lazy"></a></figure>
+          <div class="g-alert warn"><b>1番目の「Super Administrator」ではありません</b>3番目の、ただの「Administrator」です。</div>
+        </li>
+        <li>
+          <p class="do">一番下までスクロールして、「ポリシーを作成」を押します。</p>
+          <figure><a href="shots/c07_policy.jpg" target="_blank" rel="noopener"><img src="shots/c07_policy.jpg" alt="ポリシーを作成ボタン" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">「役割：Administrator」と出たら、「メンバーを招待」を押します。</p>
+          <figure><a href="shots/c08_send.jpg" target="_blank" rel="noopener"><img src="shots/c08_send.jpg" alt="メンバーを招待ボタン" loading="lazy"></a></figure>
+          <div class="g-alert ok"><b>手順3はおしまいです</b>クラレオの公式LINEに<b>「手順1〜3が終わりました。ドメインは〇〇です」</b>とお送りください。</div>
+        </li>
+      </ol>
+    </section>
 
-<!-- ============ 5 ============ -->
-<section id="step2">
-  <h2><span class="num">5</span>【手順2】Cloudflare（クラウドフレア）に登録する</h2>
-  <p>無料の「土地」を借りるための登録です。お支払い情報の入力はありません。</p>
+    <!-- 手順5 -->
+    <section class="article-section" id="step5">
+      <p class="section-index">05</p>
+      <h2>最後の設定（LINEが届いてから）</h2>
+      <p>住所と土地を「つなぐ」設定です。クラレオがLINEでお送りする<b>2つの文字</b>（<span class="val">〇〇.ns.cloudflare.com</span> のような形）を貼り付けます。</p>
 
-  <ol class="steps">
-    <li>
-      <p>Cloudflareの登録ページを開きます。</p>
-      <p><span class="val">https://dash.cloudflare.com/sign-up</span></p>
-    </li>
-    <li>
-      <p>画面が英語のときは、右上の<b>「English」</b>を押して、<b>「日本語」</b>を選びます。</p>
-      <figure><img src="img/c01_language.jpg" alt="右上の言語の切り替えで日本語を選ぶ"></figure>
-    </li>
-    <li>
-      <p><b>メールとパスワード</b>を入れて、<b>「サインアップ」</b>を押します。</p>
-      <figure><img src="img/c02_signup.jpg" alt="Cloudflareの登録画面。メール、パスワード、サインアップボタン"></figure>
-      <table>
-        <tr><th>メール</th><td>ふだん見ているメールアドレス</td></tr>
-        <tr><th>パスワード</th><td>画面に出る条件どおりに作ってください。<b>メモ用の表に書いてください</b></td></tr>
-      </table>
-      <div class="note"><b>「私はロボットではありません」が出たとき</b>四角にチェックを入れてください。</div>
-    </li>
-    <li>
-      <p>Cloudflareから<b>確認のメール</b>が届きます。メールの中のボタン（またはリンク）を押してください。</p>
-      <div class="warn"><b>メールが届かないとき</b>「迷惑メール」のフォルダに入っていることが多いです。英語のメールです。</div>
-    </li>
-    <li>
-      <p>ログインしたあと、「ドメインを追加」「プランを選ぶ」などの画面が出ることがあります。</p>
-      <div class="stop"><b>そこでは何も入力・購入しないでください</b>ドメインの追加などはクラレオが行います。左上の<b>オレンジ色の雲のマーク</b>を押すと、ホームの画面に戻れます。</div>
-      <div class="ok"><b>これで手順2はおしまいです</b>そのまま手順3に進んでください。</div>
-    </li>
-  </ol>
-</section>
+      <ol class="g-steps">
+        <li>
+          <p class="do">スタードメインにログインします。</p>
+          <p><span class="val">https://secure.netowl.jp/starapanel/login/stardomain</span><br>手順1のメールアドレスとパスワードを使います。</p>
+          <figure class="narrow"><a href="shots/s10_login.jpg" target="_blank" rel="noopener"><img src="shots/s10_login.jpg" alt="Star8アカウントのログイン画面" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">「ドメイン」の一覧から取ったドメイン名を押し、「ネームサーバー設定」の「設定変更」を押します。</p>
+        </li>
+        <li>
+          <p class="do">ほかのネームサーバーを使う項目を選び、2つの文字を1行ずつ貼り付けます。</p>
+          <p>「確認画面へ進む」→「設定を変更する」で完了です。画面の名前が違うときは、画面の写真をLINEで送ってください。</p>
+          <div class="g-alert ok"><b>これで準備はすべておしまいです</b>LINEで「変更しました」とお送りください。反映には数時間〜1日かかります。</div>
+        </li>
+      </ol>
+    </section>
 
-<!-- ============ 6 ============ -->
-<section id="step3">
-  <h2><span class="num">6</span>【手順3】クラレオを招待する</h2>
-  <p>クラレオを「お手伝い役」として招待します。こうすることで、お店さまのパスワードを教えていただかなくても、クラレオが設定作業をできるようになります。</p>
+    <!-- FAQ -->
+    <section class="article-section g-faq" id="faq">
+      <p class="section-index">FAQ</p>
+      <h2>困ったときは</h2>
+      <details><summary>途中で画面を閉じてしまった</summary><p>「申し込む」を押す前なら、お金はかかっていません。最初からやり直してください。会員登録だけ済んでいる場合は、「Star8アカウントをお持ちの方」からログインして進めます。</p></details>
+      <details><summary>「取得できません」と出た</summary><p>ほかの人が使っている住所です。LINEでご連絡ください。別の候補をお伝えします。</p></details>
+      <details><summary>パスワードを忘れた</summary><p>どちらの会社も、ログイン画面の「パスワードを忘れた方」から作り直せます。</p></details>
+      <details><summary>確認のメールが届かない</summary><p>「迷惑メール」のフォルダを見てください。それでもないときは、LINEでご連絡ください。</p></details>
+      <details><summary>「サーバーとセット」で申し込んでしまった</summary><p>すぐにLINEでご連絡ください。対応をご案内します。</p></details>
+      <details><summary>来年からの更新は？</summary><p>ドメインは毎年更新が必要です。時期が近づくとスタードメインからメールが届きます。<b>更新しないとホームページが見られなくなる</b>ので、忘れずにお手続きください。</p></details>
+      <div class="g-alert info" style="margin-top:22px"><b>どこで止まっても大丈夫です</b>画面の写真（スクリーンショット）をLINEで送っていただければ、次に押すところをお伝えします。</div>
+    </section>
 
-  <ol class="steps">
-    <li>
-      <p>Cloudflareの画面の左側のメニューを一番下まで見て、<b>「アカウントの管理」</b>を押し、出てきた<b>「メンバー」</b>を押します。</p>
-      <figure><img src="img/c03_menu.jpg" alt="左のメニューのアカウントの管理とメンバー"></figure>
-      <figcaption>※写真はクラレオの画面です。お店さまの画面では、真ん中に表示される内容が違います。</figcaption>
-    </li>
-    <li>
-      <p>右上の青いボタン<b>「＋メンバーを招待」</b>を押します。</p>
-      <figure><img src="img/c04_members.jpg" alt="メンバーの画面のメンバーを招待ボタン"></figure>
-    </li>
-    <li>
-      <p>一番上の<b>「メールアドレスを追加する」</b>の欄に、次のメールアドレスを入れます。</p>
-      <p><span class="val">clareo.jp@gmail.com</span></p>
-      <p>その下の一覧から<b>「Administrator」</b>（アドミニストレーター＝管理者）の行を探して、右端のスイッチを押してオンにします。</p>
-      <figure><img src="img/c05_invite.jpg" alt="メールアドレスの入力欄と、Administratorのスイッチ"></figure>
-      <div class="warn"><b>「Super Administrator」ではありません</b>上から3番目の、ただの「Administrator」です。お間違えのないようにお願いします。</div>
-    </li>
-    <li>
-      <p>画面を一番下までスクロールして、右下の<b>「ポリシーを作成」</b>を押します。</p>
-      <figure><img src="img/c06_policy.jpg" alt="ポリシーを作成ボタン"></figure>
-    </li>
-    <li>
-      <p>「役割：Administrator」と表示されたことを確かめて、右下の<b>「メンバーを招待」</b>を押します。</p>
-      <figure><img src="img/c07_send.jpg" alt="役割がAdministratorになり、メンバーを招待ボタンが押せる状態"></figure>
-      <div class="ok"><b>これで手順3はおしまいです</b>クラレオに招待のメールが届きます。</div>
-    </li>
-  </ol>
-</section>
+    </article>
+  </div></main>
 
-<!-- ============ 7 ============ -->
-<section id="done">
-  <h2><span class="num">7</span>終わったら、LINEで一言</h2>
-  <div class="card">
-    <p>クラレオの公式LINEに、次のようにお送りください。</p>
-    <p><b>「手順1〜3が終わりました。ドメインは 〇〇〇〇.jp です」</b></p>
-    <p>そのあと、クラレオで「手順4」の設定を進めて、<b>手順5で使う2つの文字</b>をLINEでお送りします。</p>
-  </div>
-</section>
-
-<!-- ============ 8 ============ -->
-<section id="step5">
-  <h2><span class="num">8</span>【手順5】最後の設定（クラレオからLINEが来てからお願いします）</h2>
-  <p>住所（ドメイン）と土地（Cloudflare）を「つなぐ」ための設定です。クラレオからLINEで届いた<b>2つの文字</b>を、スタードメインに貼り付けます。</p>
-  <p>2つの文字は、例えばこのような形です：<span class="val">〇〇〇〇.ns.cloudflare.com</span></p>
-
-  <ol class="steps">
-    <li>
-      <p>スタードメインの<b>ログイン画面</b>を開いて、手順1で作ったメールアドレスとパスワードでログインします。</p>
-      <p><span class="val">https://secure.netowl.jp/starapanel/login/stardomain</span></p>
-      <figure><img src="img/s10_star8_login.jpg" alt="Star8アカウントのログイン画面"></figure>
-    </li>
-    <li>
-      <p>トップページの「ドメイン」の一覧から、<b>取ったドメイン名</b>を押します。</p>
-    </li>
-    <li>
-      <p>「ネームサーバー設定」のところにある<b>「設定変更」</b>を押します。</p>
-    </li>
-    <li>
-      <p>「他のネームサーバーを使う」にあたる項目を選んで、<b>LINEで届いた2つの文字を1行ずつ</b>貼り付けます。</p>
-      <p>そのあと<b>「確認画面へ進む」</b>→<b>「設定を変更する」</b>を押せば完了です。</p>
-      <div class="note"><b>この手順5は、写真がありません</b>画面の名前が少し違うときや、どこかわからないときは、画面の写真（スクリーンショット）をLINEで送ってください。次に押すところをお伝えします。</div>
-    </li>
-    <li>
-      <p>終わったら、LINEで<b>「変更しました」</b>とお送りください。</p>
-      <p>反映されるまで数時間〜1日ほどかかります。クラレオで確認して、ご連絡します。<b>これで準備はすべておしまいです。</b></p>
-    </li>
-  </ol>
-</section>
-
-<!-- ============ 9 ============ -->
-<section id="faq">
-  <h2><span class="num">9</span>困ったときは</h2>
-
-  <details><summary>途中で画面を閉じてしまいました</summary>
-    <p>大丈夫です。手順1の途中なら、もう一度最初から進めてください。お申し込み（「申し込む」ボタン）を押す前なら、お金はかかっていません。アカウントの登録だけ済んでいる場合は、「Star8アカウントをお持ちの方」の欄からログインして進めます。</p>
-  </details>
-  <details><summary>「取得できません」と出ました</summary>
-    <p>その住所は、ほかの人がすでに使っています。何もせず、LINEでご連絡ください。別の候補をお伝えします。</p>
-  </details>
-  <details><summary>パスワードを忘れました</summary>
-    <p>スタードメインもCloudflareも、ログイン画面に「パスワードを忘れた方」のリンクがあります。そこから、登録したメールアドレスで作り直せます。</p>
-  </details>
-  <details><summary>確認のメールが届きません</summary>
-    <p>「迷惑メール」のフォルダを見てください。それでも届かないときは、登録したメールアドレスが合っているか確かめて、LINEでご連絡ください。</p>
-  </details>
-  <details><summary>うっかり「サーバーとセット」で申し込んでしまいました</summary>
-    <p>すぐにLINEでご連絡ください。スタードメインへの連絡のしかたをご案内します。</p>
-  </details>
-  <details><summary>来年からの更新はどうなりますか？</summary>
-    <p>ドメインは毎年の更新が必要です（2年目からは毎年3,201円）。更新の時期が近づくと、スタードメインからメールが届きます。<b>更新をしないと、ホームページが見られなくなってしまう</b>ので、忘れずにお手続きください。</p>
-  </details>
-  <details><summary>Cloudflareから英語のメールが来ました</summary>
-    <p>多くはお知らせのメールです。お支払いを求めるメールが来ることはありません（無料のまま使うため）。気になるメールがあれば、LINEで画面の写真を送ってください。</p>
-  </details>
-
-  <div class="card">
-    <p><b>どこで止まっても、画面の写真（スクリーンショット）をLINEで送っていただければ、次に押すところをお伝えします。</b></p>
-    <p style="font-size:15px;color:var(--muted)">スクリーンショットの撮り方：Windowsは「Windowsキー＋Shift＋S」、Macは「command＋Shift＋4」。スマホで画面を撮影していただいても大丈夫です。</p>
-  </div>
-</section>
-
-</main>
-<footer>クラレオ ｜ 山梨のホームページ制作<br>この手順書の内容は2026年10月時点のものです。</footer>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="クラレオ トップ">
+  <span class="brand-mark" aria-hidden="true"><img src="/assets/clareo-c-monogram.png" alt=""></span>
+  <span class="brand-copy"><span class="brand-name">clareo</span><span class="brand-tag">山梨のホームページ制作</span></span></a>
+          <p class="footer-copy">ホームページ制作を入口に、発信・広告・仕事の効率化まで。山梨の事業者を中心に、ご相談内容に合わせてお手伝いします。</p>
+        </div>
+        <div>
+          <p class="footer-title">SERVICES</p>
+          <ul class="footer-links"><li><a href="/service/website/">ホームページ制作</a></li><li><a href="/service/lp/">LP制作</a></li><li><a href="/service/ec/">ECサイト制作</a></li><li><a href="/service/sns-ads/">Instagram・広告の運用</a></li><li><a href="/service/ai/">業務改善・AI活用</a></li></ul>
+        </div>
+        <div>
+          <p class="footer-title">INFORMATION</p>
+          <ul class="footer-links">
+            <li><a href="/about/">クラレオについて</a></li>
+            <li><a href="/price/">料金</a></li>
+            <li><a href="/flow/">ご依頼の流れ</a></li>
+            <li><a href="/faq/">よくある質問</a></li>
+            <li><a href="/news/">お知らせ</a></li>
+            <li><a href="/contact/">お問い合わせ</a></li>
+            <li><a href="/privacy/">プライバシーポリシー</a></li>
+            <li><a href="/legal/">特定商取引法に基づく表記</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© clareo</span><span>山梨県の事業者を中心に対応</span></div>
+    </div>
+  </footer>
+  <a class="mobile-contact" href="https://line.me/R/ti/p/@870gheuy" target="_blank" rel="noopener">LINEで質問する ↗</a>
+  <script src="/app.js" defer></script>
 </body>
 </html>
