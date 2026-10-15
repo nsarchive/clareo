@@ -132,6 +132,9 @@ section.navy { background: var(--navy); }
 .hero .wrap { position: relative; z-index: 1; padding-bottom: 80px; width: 100%; }
 .hero h1 { font-size: clamp(26px, 6.6vw, 60px); line-height: 1.45; margin: 0 0 16px; letter-spacing: .08em; font-weight: 700; }
 .hero h1 span { display: inline-block; }
+.nw { display: inline-block; }
+h1, h2, h3 { text-wrap: balance; }
+p, li, td, .a { text-wrap: pretty; } /* 行末に1〜2文字だけ残る折り返しを減らす */ /* 見出しを文節で折り返す（スマホで「守/りたい」のように切れないように） */
 .hero p { color: var(--accent); margin: 0 0 32px; font-size: clamp(14px, 1.6vw, 17px); }
 .hero .btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
@@ -211,6 +214,8 @@ a.card:hover { border-color: var(--accent); }
   .table.stack th, .table.stack td { display: block; width: 100%; padding: 4px 0; border: 0; }
   .table.stack tr { display: block; padding: 14px 0; border-bottom: 1px solid var(--line); }
   .table td.price { white-space: normal; }
+  .table.stack td.price { font-size: 22px; font-weight: 600; }
+  .table.stack th a { font-weight: 700; }
 }
 
 /* ---------- 下層ページ ---------- */
