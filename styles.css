@@ -109,10 +109,11 @@ h1, h2, h3 {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 186%;
-  height: 186%;
+  width: 180%;
+  height: 180%;
   max-width: none;
-  transform: translate(-50%, -50%);
+  /* 画像の中でCが少し上に寄っているので、下にずらして上が切れないようにする */
+  transform: translate(-50%, -48.9%);
 }
 
 .brand-copy { display: grid; line-height: 1.1; }
