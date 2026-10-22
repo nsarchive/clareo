@@ -122,7 +122,7 @@ h1, h2, h3 {
 
 .global-nav { margin-left: auto; }
 .nav-list { display: flex; align-items: center; gap: 28px; padding: 0; margin: 0; list-style: none; }
-.nav-link { text-decoration: none; font-size: 14px; font-weight: 700; }
+.nav-link { text-decoration: none; font-size: 14px; font-weight: 700; white-space: nowrap; }
 .nav-link:hover { color: var(--blue); }
 
 .header-cta {
@@ -509,6 +509,34 @@ h1, h2, h3 {
 
 .mobile-contact { display: none; }
 
+/* 制作実績（/works/） */
+.button-outline { color: var(--navy); border-color: var(--line); background: var(--white); }
+.work-tag { margin: 0 0 12px; color: var(--blue); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.work-case h2 { margin-bottom: 10px; }
+.work-lead { margin: 0 0 30px !important; font-weight: 700; color: var(--ink) !important; }
+.work-shots { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr) minmax(0, 1fr); gap: 16px; align-items: start; margin: 0 0 26px; }
+.work-shot { margin: 0; }
+.work-shot img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--line); box-shadow: var(--shadow); background: var(--navy); }
+.work-shot figcaption { margin-top: 10px; color: var(--muted); font-size: 12px; text-align: center; }
+.work-table { margin: 34px 0 10px; }
+.work-points { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.work-points li { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); color: var(--muted); font-size: 14px; }
+.work-points strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 16px; }
+.work-voice { margin-top: 40px; padding: 30px 32px; border-radius: 20px; background: var(--navy); color: var(--white); }
+.work-voice-label { margin: 0 0 12px !important; color: var(--cyan) !important; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.work-voice blockquote { margin: 0; }
+.work-voice blockquote p { margin: 0 !important; color: var(--white) !important; font-size: 18px; font-weight: 700; line-height: 1.8; }
+.work-voice-name { margin: 16px 0 0 !important; color: rgba(255,255,255,.65) !important; font-size: 13px; }
+.home-work { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.home-work img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,.14); }
+
+/* メニューが6項目になったので、中くらいの画面幅では詰めて1行に収める（2026-10-22） */
+@media (min-width: 961px) and (max-width: 1200px) {
+  .nav-list { gap: 18px; }
+  .nav-link { font-size: 13px; }
+  .header-cta { padding-inline: 18px; }
+}
+
 @media (max-width: 960px) {
   .header-inner { min-height: 76px; }
   .global-nav {
@@ -536,6 +564,11 @@ h1, h2, h3 {
 }
 
 @media (max-width: 720px) {
+  .work-shots { grid-template-columns: 1fr 1fr; }
+  .work-shot-pc { grid-column: 1 / -1; }
+  .work-voice { padding: 24px 22px; }
+  .work-voice blockquote p { font-size: 16px; }
+  .home-work { grid-template-columns: 1fr; gap: 24px; }
   body { font-size: 15px; }
   .container { width: min(calc(100% - 32px), var(--max)); }
   .brand-mark { width: 34px; height: 34px; }
