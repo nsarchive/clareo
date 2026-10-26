@@ -106,6 +106,7 @@ details.g-more .in{padding:0 16px 14px}
       <li><a href="#about">はじめに ↓</a></li>
       <li><a href="#step1">手順1 ドメインを取る ↓</a></li>
       <li><a href="#step2">手順2 Cloudflareに登録 ↓</a></li>
+      <li><a href="#step2-safety">ログインの安全設定 ↓</a></li>
       <li><a href="#step3">手順3 クラレオを招待 ↓</a></li>
       <li><a href="#step5">手順5 最後の設定 ↓</a></li>
       <li><a href="#faq">困ったときは ↓</a></li>
@@ -136,7 +137,7 @@ details.g-more .in{padding:0 16px 14px}
       <h3>全体の流れ</h3>
       <ol class="g-flow">
         <li><span class="n">1</span><div><b>スタードメインでドメインを取る<span class="who you">お店さま</span></b><small>約15分</small></div></li>
-        <li><span class="n">2</span><div><b>Cloudflareに登録する<span class="who you">お店さま</span></b><small>約5分・無料</small></div></li>
+        <li><span class="n">2</span><div><b>Cloudflareに登録する<span class="who you">お店さま</span></b><small>約10分・無料（ログインの安全設定も）</small></div></li>
         <li><span class="n">3</span><div><b>クラレオを招待する<span class="who you">お店さま</span></b><small>約5分</small></div></li>
         <li><span class="n later">4</span><div><b>つなぐ設定をする<span class="who us">クラレオ</span></b><small>終わったらLINEでご連絡します</small></div></li>
         <li><span class="n later">5</span><div><b>最後の設定を1か所だけ<span class="who you">お店さま</span></b><small>LINEでお送りする文字を貼り付けるだけ</small></div></li>
@@ -148,6 +149,7 @@ details.g-more .in{padding:0 16px 14px}
         <li>パソコン（スマホでもできますが、パソコンがおすすめです）</li>
         <li>ふだん見ているメールアドレス</li>
         <li>クレジットカード（コンビニ払い・銀行振込も選べます）</li>
+        <li>スマホ（ログインの安全設定で「Google Authenticator」という無料のアプリを使います）</li>
         <li>紙とペン（パスワードを書いておくため）</li>
         <li>LINEでお伝えしたドメイン名</li>
       </ul>
@@ -251,6 +253,29 @@ details.g-more .in{padding:0 16px 14px}
           <div class="g-alert stop"><b>「ドメインを追加」「プランを選ぶ」などが出ても、何も入力・購入しないでください</b>左上のオレンジ色の雲のマークを押すと、ホームに戻れます。</div>
         </li>
       </ol>
+
+      <h3 id="step2-safety">続けて、ログインの安全設定（約5分）</h3>
+      <p>パスワードのほかに、スマホに出る6けたの数字がないとログインできないようにします（2段階認証）。パスワードが知られても、ホームページを書き換えられないようにするためです。<b>クラレオからのお願いはこれだけで、あとからLINEでお願いすることはありません。</b></p>
+      <ol class="g-steps">
+        <li>
+          <p class="do">スマホに「Google Authenticator」を入れます。</p>
+          <p>App Store／Google Playで「Google Authenticator」と検索します。無料です。</p>
+        </li>
+        <li>
+          <p class="do">Cloudflareの画面で、右上の人のマーク →「プロフィール」を押します。</p>
+          <p>左のメニューの「アクセス管理」→「認証」を押し、「モバイル アプリの認証」の右の「追加」を押します。</p>
+          <figure><a href="shots/c09_auth.jpg" target="_blank" rel="noopener"><img src="shots/c09_auth.jpg" alt="認証の画面と、モバイル アプリの認証の追加ボタン" loading="lazy"></a></figure>
+        </li>
+        <li>
+          <p class="do">画面に出た四角い模様（QRコード）を、スマホのアプリで読み取ります。</p>
+          <p>アプリの「＋」→「QRコードをスキャン」を押して、パソコンの画面に向けます。アプリに出た6けたの数字を、Cloudflareの画面に入れます。パスワードを聞かれたら、手順2で決めたものを入れます。</p>
+        </li>
+        <li>
+          <p class="do">「バックアップコード」を紙に書くか、印刷して保管します。</p>
+          <div class="g-alert stop"><b>バックアップコードは、クラレオにも誰にも送らないでください</b>スマホをなくしたときに、これでログインできます。パスワードと同じ紙に書いておくと安心です。</div>
+          <div class="g-alert ok"><b>これで手順2はおしまいです</b>次のログインから、パスワードのあとに6けたの数字を聞かれます。クラレオは「招待」で作業するので、この数字をお伝えいただく必要はありません。</div>
+        </li>
+      </ol>
     </section>
 
     <!-- 手順3 -->
@@ -322,6 +347,7 @@ details.g-more .in{padding:0 16px 14px}
       <details><summary>パスワードを忘れた</summary><p>どちらの会社も、ログイン画面の「パスワードを忘れた方」から作り直せます。</p></details>
       <details><summary>確認のメールが届かない</summary><p>「迷惑メール」のフォルダを見てください。それでもないときは、LINEでご連絡ください。</p></details>
       <details><summary>「サーバーとセット」で申し込んでしまった</summary><p>すぐにLINEでご連絡ください。対応をご案内します。</p></details>
+      <details><summary>スマホを替えた・なくした</summary><p>ログインの画面で「バックアップコード」を使ってください。入れたあと、新しいスマホで「ログインの安全設定」をやり直します。わからないときはLINEでご連絡ください（コードは送らないでください）。</p></details>
       <details><summary>来年からの更新は？</summary><p>ドメインは毎年更新が必要です。時期が近づくとスタードメインからメールが届きます。<b>更新しないとホームページが見られなくなる</b>ので、忘れずにお手続きください。</p></details>
       <div class="g-alert info" style="margin-top:22px"><b>どこで止まっても大丈夫です</b>画面の写真（スクリーンショット）をLINEで送っていただければ、次に押すところをお伝えします。</div>
     </section>
