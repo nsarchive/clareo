@@ -17,6 +17,19 @@
   <meta name="theme-color" content="#07172f">
   <link rel="icon" href="/assets/clareo-c-monogram.png" type="image/png">
   <link rel="stylesheet" href="/styles.css?v=20261022">
+  <!-- Googleアナリティクス（GA4） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4CD9BZFEF5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4CD9BZFEF5');
+    // 電話・LINEボタンが押された回数を数える（GA4のイベント tel_click／line_click）
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="tel:"], a[href*="lin.ee"], a[href*="line.me"]');
+      if (a) gtag('event', a.href.startsWith('tel:') ? 'tel_click' : 'line_click', { link_url: a.href });
+    });
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
