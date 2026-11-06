@@ -564,6 +564,9 @@ h1, h2, h3 {
 .work-voice blockquote p { margin: 0 !important; color: var(--white) !important; font-size: 18px; font-weight: 700; line-height: 1.8; }
 .work-voice-name { margin: 16px 0 0 !important; color: rgba(255,255,255,.65) !important; font-size: 13px; }
 .home-work { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.home-work .notice { color: rgba(255,255,255,.86); background: rgba(255,255,255,.07); border-left-color: var(--cyan); }
+.home-work .notice strong { color: var(--white); }
+.home-work .notice a { color: var(--cyan); }
 .home-work img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid rgba(255,255,255,.14); }
 
 /* メニューが6項目になったので、中くらいの画面幅では詰めて1行に収める（2026-10-22） */

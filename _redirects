@@ -1,0 +1,3 @@
+# 試作ページは公開済みのお店のサイトへ転送（2026-11-06）
+/preview/madetail/* https://madetail.jp/:splat 301
+/preview/madetail https://madetail.jp/ 301
