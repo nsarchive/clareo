@@ -427,6 +427,21 @@ h1, h2, h3 {
 .faq-answer { padding: 0 50px 26px 59px; color: var(--muted); }
 .faq-answer p { margin: 0; }
 
+.cta-band { padding-block: 72px; background: var(--blue); }
+.cta-card { padding: 56px 40px; border-radius: 28px; background: var(--white); text-align: center; }
+.cta-kicker { margin: 0 0 14px; font-size: 15px; font-weight: 800; color: var(--ink); }
+.cta-kicker span { background: linear-gradient(transparent 60%, var(--cyan-soft) 60%); }
+.cta-card h2 { margin: 0 0 16px; color: var(--blue); font-size: clamp(26px, 4vw, 40px); line-height: 1.35; }
+.cta-lead { max-width: 640px; margin: 0 auto 32px; color: var(--muted); font-size: 15px; }
+.cta-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; }
+.cta-action { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 260px; }
+.cta-action .button { width: 100%; justify-content: center; }
+.cta-note { margin: 0; color: var(--ink); font-size: 12px; font-weight: 700; }
+@media (max-width: 640px) {
+  .cta-band { padding-block: 48px; }
+  .cta-card { padding: 40px 20px; border-radius: 20px; }
+  .cta-action { min-width: 0; width: 100%; }
+}
 .contact-band { padding-block: 100px; color: var(--white); background: linear-gradient(135deg, #0a244d, #06142a); }
 .contact-grid { grid-template-columns: 1fr 1fr; border-color: var(--line-dark); background: var(--line-dark); }
 .contact-card { min-height: 230px; padding: 38px; background: rgba(255,255,255,.025); text-decoration: none; }
