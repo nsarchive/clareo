@@ -695,3 +695,11 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* 無料診断ページ：最初の画面に要点と申し込みボタン（2026-11-20） */
+.page-hero .proof-list { max-width: 720px; margin-top: 28px; }
+.page-hero .proof-list li { color: var(--white); }
+.article-section .flow-list { margin-top: 28px; }
+@media (min-width: 721px) {
+  .flow-list.flow-3 { grid-template-columns: repeat(3, 1fr); }
+}
